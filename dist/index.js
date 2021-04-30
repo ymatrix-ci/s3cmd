@@ -461,6 +461,14 @@ const providers = {
     website_endpoint: `https://%(bucket)s.s3-website.${region}.scw.cloud/`,
     access_key,
     secret_key,
+  }),
+  cnaws: ({ region = 'cn-northwest-1', access_key = '', secret_key = '' }) => ({
+    bucket_location: region,
+    host_base: `s3.${region}.amazonaws.com.cn`,
+    host_bucket: `%(bucket)s.s3.${region}.amazonaws.com.cn`,
+    website_endpoint: `https://%(bucket)s.s3.${region}.amazonaws.com.cn/`,
+    access_key,
+    secret_key,
   })
 }
 
