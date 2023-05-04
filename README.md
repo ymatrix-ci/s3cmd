@@ -29,10 +29,6 @@ Currently the below providers are supported, but it could be used with other pro
 
 **Not Required** The default region to use. The default depends on the provider.
 
-### `host_base`
-
-**Not Required** The default host_base to use, like s3.cn-northwest-1.amazonaws.com.cn
-
 ## Example usage
 
 ```yml
@@ -40,10 +36,9 @@ Currently the below providers are supported, but it could be used with other pro
   uses: s3-actions/s3cmd@v1.4.0
   with:
     provider: aws # default is linode
-    region: 'cn-northwest-1'
+    region: 'eu-central-1'
     access_key: ${{ secrets.S3_ACCESS_KEY }}
     secret_key: ${{ secrets.S3_SECRET_KEY }}
-    host_base: s3.cn-northwest-1.amazonaws.com.cn
 
 - name: Interact with object storage
   run: |

@@ -17,8 +17,6 @@ inputs:
   secret_key:
     description: "s3 secret key"
     required: true
-  host_base:
-    description: 'host base like s3.cn-northwest-1.amazonaws.com.cn'
 runs:
   using: "node16"
   main: "dist/index.js"
